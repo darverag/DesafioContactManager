@@ -10,6 +10,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="Darío Vera García">
 <title>Mantenedor de Contactos</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 <script type="text/javascript">
 	var idSelect = 0;
 	function submitFormAction(action, method){
@@ -23,7 +25,7 @@
 	}
 	
 	function deleteRow(){
-	alert(`Éliminando el registro N°`, + idSelect);
+	alert(`Eliminando el registro N°`+idSelect);
 	document.getElementById("frmAcciones").action = "/contactManager/deleteContact/?id=" + idSelect;
 	document.getElementById("frmAcciones").method = "GET";
 	document.getElementById("frmAcciones").submit();
@@ -33,6 +35,22 @@
 </script>
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">${param.title}</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <a class="nav-link" href="#">Registro de Clientes</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<br>
+<br>
 <form:form id="frmAcciones" modelAttribute="contacto">
 		<div>
 			<fieldset>
@@ -92,5 +110,12 @@
 			</table>
 		</div>
 	</fieldset>
+	<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between py-3 my-5 border-top">
+    <p class="text-left">© 2022 Company, Inc</p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
