@@ -49,7 +49,7 @@ public class ContactoController {
 	
 	@RequestMapping(value="/addContact", method=RequestMethod.POST)
 	public String addContact(ModelMap model, @ModelAttribute("contacto") Contacto contacto) {
-		contacto.setIdContacto(listaContacto.size() + 1);
+		contacto.setIdContacto(listaContacto.size()+ 1);
 		listaContacto.add(contacto);
 		model.put("listaContacto", listaContacto);
 		return "contactManager";

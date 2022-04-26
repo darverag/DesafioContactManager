@@ -25,10 +25,6 @@
 	}
 	
 	function deleteRow(){
-	alert(`Eliminando el registro N°`+idSelect);
-	document.getElementById("frmAcciones").action = "/contactManager/deleteContact/?id=" + idSelect;
-	document.getElementById("frmAcciones").method = "GET";
-	document.getElementById("frmAcciones").submit();
 		
 		window.location.href = "/contactManager/deleteContact/?id=" + idSelect;
 	}
@@ -51,11 +47,12 @@
 </nav>
 <br>
 <br>
-<form:form id="frmAcciones" modelAttribute="contacto">
+
+	<form:form id="frmAcciones" modelAttribute="contacto">
 		<div>
 			<fieldset>
 				<legend>Mantenedor de Contactos</legend>
-				<table border="1">
+				<table border="3">
 					<tr>
 						<td>Nombre: </td>
 						<td><input type="text" id="idNombre" name="nombre"/></td>
@@ -83,8 +80,10 @@
 	</form:form>
 	<fieldset>
 	<legend>Lista de contactos</legend>
+	<br>
+	<br>
 		<div align="center">
-			<table border="1" >
+			<table border="3" >
 			<tr>
 				<th></th>
 				<th>Id</th>
@@ -110,12 +109,12 @@
 			</table>
 		</div>
 	</fieldset>
-	<div class="container">
+	
+<div class="container">
   <footer class="d-flex flex-wrap justify-content-between py-3 my-5 border-top">
     <p class="text-left">© 2022 Company, Inc</p>
   </footer>
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
